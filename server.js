@@ -95,6 +95,10 @@ var SampleApp = function() {
     self.createRoutes = function() {
         self.routes = { };
 
+        self.routes['/alisson'] = function(req, res) {
+            res.json({mensagem:"JSON rima com Alisson"});
+        };
+
         self.routes['/asciimo'] = function(req, res) {
             var link = "http://i.imgur.com/kmbjB.png";
             res.send("<html><body><img src='" + link + "'></body></html>");
