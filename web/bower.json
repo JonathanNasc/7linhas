@@ -1,0 +1,21 @@
+{
+  "name": "web",
+  "authors": [
+    "Jonathan Nascimento <jonathan.nasc@yahoo.com.br>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mithril": "~0.2.4"
+  }
+}

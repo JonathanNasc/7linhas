@@ -39,11 +39,12 @@ var SampleApp = function() {
      */
     self.populateCache = function() {
         if (typeof self.zcache === "undefined") {
-            self.zcache = { 'index.html': '' };
+            self.zcache = { 'index.html': '', 'teste.html': '' };
         }
 
         //  Local cache for static content.
         self.zcache['index.html'] = fs.readFileSync('./index.html');
+        self.zcache['teste.html'] = fs.readFileSync('./web/index.html');
     };
 
 
@@ -123,6 +124,7 @@ var SampleApp = function() {
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
         }
+
     };
 
 
@@ -144,6 +146,8 @@ var SampleApp = function() {
      */
     self.start = function() {
         //  Start the app on the specific interface (and port).
+        self.app.use(express.static('web'));
+
         self.app.listen(self.port, self.ipaddress, function() {
             console.log('%s: Node server started on %s:%d ...',
                         Date(Date.now() ), self.ipaddress, self.port);
@@ -153,11 +157,9 @@ var SampleApp = function() {
 };   /*  Sample Application.  */
 
 
-
 /**
  *  main():  Main code.
  */
 var zapp = new SampleApp();
 zapp.initialize();
 zapp.start();
-
