@@ -1,21 +1,13 @@
 #!/bin/env node
-//  OpenShift sample Node application
+//  7linhas node server
 var express = require('express');
 var fs      = require('fs');
-
 
 /**
  *  Define the sample application.
  */
-var SampleApp = function() {
-
-    //  Scope.
+var ServerApp = function() {
     var self = this;
-
-
-    /*  ================================================================  */
-    /*  Helper functions.                                                 */
-    /*  ================================================================  */
 
     /**
      *  Set up server IP address and port # using env variables/defaults.
@@ -26,34 +18,10 @@ var SampleApp = function() {
         self.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
         if (typeof self.ipaddress === "undefined") {
-            //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
-            //  allows us to run/test the app locally.
-            console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1');
+            console.warn('No OPENSHIFT_NODEJS_IP var, using localhost 127.0.0.1');
             self.ipaddress = "127.0.0.1";
         };
     };
-
-
-    /**
-     *  Populate the cache.
-     */
-    self.populateCache = function() {
-        if (typeof self.zcache === "undefined") {
-            self.zcache = { 'index.html': '', 'teste.html': '' };
-        }
-
-        //  Local cache for static content.
-        self.zcache['index.html'] = fs.readFileSync('./index.html');
-        self.zcache['teste.html'] = fs.readFileSync('./web/index.html');
-    };
-
-
-    /**
-     *  Retrieve entry (content) from cache.
-     *  @param {string} key  Key identifying content to retrieve from cache.
-     */
-    self.cache_get = function(key) { return self.zcache[key]; };
-
 
     /**
      *  terminator === the termination handler
@@ -62,13 +30,11 @@ var SampleApp = function() {
      */
     self.terminator = function(sig){
         if (typeof sig === "string") {
-           console.log('%s: Received %s - terminating sample app ...',
-                       Date(Date.now()), sig);
+           console.log('%s: Received %s - terminating server app ...', Date(Date.now()), sig);
            process.exit(1);
         }
         console.log('%s: Node server stopped.', Date(Date.now()) );
     };
-
 
     /**
      *  Setup termination handlers (for exit and a list of signals).
@@ -85,13 +51,8 @@ var SampleApp = function() {
         });
     };
 
-
-    /*  ================================================================  */
-    /*  App server functions (main app logic here).                       */
-    /*  ================================================================  */
-
     /**
-     *  Create the routing table entries + handlers for the application.
+     *  Create the routing entries API Logic is HERE:
      */
     self.createRoutes = function() {
         self.routes = { };
@@ -100,66 +61,46 @@ var SampleApp = function() {
             res.json({mensagem:"JSON rima com Alisson"});
         };
 
-        self.routes['/asciimo'] = function(req, res) {
-            var link = "http://i.imgur.com/kmbjB.png";
-            res.send("<html><body><img src='" + link + "'></body></html>");
-        };
-
-        self.routes['/'] = function(req, res) {
-            res.setHeader('Content-Type', 'text/html');
-            res.send(self.cache_get('index.html') );
-        };
     };
 
-
     /**
-     *  Initialize the server (express) and create the routes and register
-     *  the handlers.
+     *  Initialize the server (express) and create the routes and register the handlers.
      */
     self.initializeServer = function() {
         self.createRoutes();
         self.app = express.createServer();
 
+        self.app.use(express.static('web'));
+        self.app.use('/galleon', express.static('galleon'));
+
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
         }
-
     };
 
-
     /**
-     *  Initializes the sample application.
+     *  Initializes the server application.
      */
     self.initialize = function() {
         self.setupVariables();
-        self.populateCache();
         self.setupTerminationHandlers();
-
-        // Create the express server and routes.
         self.initializeServer();
     };
 
-
     /**
-     *  Start the server (starts up the sample application).
+     *  Start the server (starts up the server application).
      */
     self.start = function() {
-        //  Start the app on the specific interface (and port).
-        self.app.use(express.static('web'));
-
+    	self.initialize();
         self.app.listen(self.port, self.ipaddress, function() {
-            console.log('%s: Node server started on %s:%d ...',
-                        Date(Date.now() ), self.ipaddress, self.port);
+            console.log('%s: Node server started on %s:%d ...', Date(Date.now()), self.ipaddress, self.port);
         });
     };
-
-};   /*  Sample Application.  */
-
+}; 
 
 /**
  *  main():  Main code.
  */
-var zapp = new SampleApp();
-zapp.initialize();
-zapp.start();
+var serverApp = new ServerApp();
+serverApp.start();

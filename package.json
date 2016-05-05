@@ -20,8 +20,7 @@
   },
 
   "scripts": {
-    "start": "node server.js",
-    "install": "./install.sh"
+    "start": "node server.js"
   },
 
   "engines": {
