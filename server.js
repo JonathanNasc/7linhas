@@ -1,7 +1,7 @@
 #!/bin/env node
 //  7linhas node server
-var express = require('express');
-var fs      = require('fs');
+var express  = require('express');
+var executor = require('./app/api/executor');
 
 /**
  *  Define the sample application.
@@ -58,7 +58,11 @@ var ServerApp = function() {
         self.routes = { };
 
         self.routes['/alisson'] = function(req, res) {
-            res.json({mensagem:"JSON rima com Alisson"});
+            res.json({mensagem:"JSON rima com alisSON"});
+        };
+        
+        self.routes['/execute'] = function(req, res) {
+            res.json(executor.execute(req.query));
         };
 
     };
@@ -68,9 +72,12 @@ var ServerApp = function() {
      */
     self.initializeServer = function() {
         self.createRoutes();
-        self.app = express.createServer();
-
+        self.app = express();
+        
+        // Enable the front-end page
         self.app.use(express.static('web'));
+        
+        // Enable Galleon
         self.app.use('/galleon', express.static('galleon'));
 
         //  Add handlers for the app (from the routes).
