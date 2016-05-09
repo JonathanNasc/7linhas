@@ -2,13 +2,13 @@ var Promise = require('bluebird');
 var fs = require('fs');
 var path = require('path');
 
-var executors = new Map();
+var executors = {};
 
 var execute = function (command){
     if(!executors.has(command.action))
         throw "Executor not found, verify if the action of this command is declared: " + command.action;
 
-    var executor = executors.get(command.action);
+    var executor = executors[command.action];
 
     try {
         var result = executor.execute(command);
@@ -35,7 +35,7 @@ var scan = function (currentDirPath, callback) {
 var setExecutorsMap = function(filePath){
     var executorQualifiedName = path.relative(__dirname, filePath.toString());
     var executor = require("./"+executorQualifiedName);
-    executors.set(executor.action, executor);
+    executors[executor.action] = executor;
 }
 
 scan(__dirname, setExecutorsMap);
