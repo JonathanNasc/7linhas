@@ -49,23 +49,7 @@ var ServerApp = function() {
     };
 
     /**
-     *  Create the routing entries API Logic is HERE:
-     */
-    self.createRoutes = function() {
-        self.routes = { };
-
-        self.routes['/alisson'] = function(req, res) {
-            res.json({mensagem:"JSON rima com alisSON"});
-        };
-
-        self.routes['/execute'] = function(req, res) {
-
-        };
-
-    };
-
-    /**
-     *  Initialize the server (express) and create the routes and register the handlers.
+     *  Initialize the server (express) and create the routes.
      */
     self.initializeServer = function() {
         //
