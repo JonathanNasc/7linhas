@@ -1,22 +1,10 @@
 {
-  "name": "OpenShift-Sample-App",
+  "name": "seven-lines",
   "version": "1.0.0",
-  "description": "OpenShift Sample Application",
-  "keywords": [
-    "OpenShift",
-    "Node.js",
-    "application",
-    "openshift"
-  ],
+  "description": "The hottest seven lines of your day",
   "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
-  },
-  "homepage": "http://www.openshift.com/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "name": "Japplab",
+    "email": "we@donthaveone.yet"
   },
   "scripts": {
     "start": "node server.js"
@@ -27,10 +15,9 @@
   },
   "dependencies": {
     "express": "~3.4.4",
+    "bluebird": "^2.9.30",
     "scrape-js": "0.0.0"
   },
-  "devDependencies": {},
-  "bundleDependencies": [],
   "private": true,
   "main": "server.js"
 }

@@ -1,11 +1,8 @@
 #!/bin/env node
 //  7linhas node server
 var express  = require('express');
-var executor = require('./app/api/executor');
+var execute = require('./app/execute');
 
-/**
- *  Define the sample application.
- */
 var ServerApp = function() {
     var self = this;
 
@@ -60,9 +57,9 @@ var ServerApp = function() {
         self.routes['/alisson'] = function(req, res) {
             res.json({mensagem:"JSON rima com alisSON"});
         };
-        
+
         self.routes['/execute'] = function(req, res) {
-            res.json(executor.execute(req.query));
+
         };
 
     };
@@ -71,19 +68,29 @@ var ServerApp = function() {
      *  Initialize the server (express) and create the routes and register the handlers.
      */
     self.initializeServer = function() {
-        self.createRoutes();
+        //
         self.app = express();
-        
+
         // Enable the front-end page
-        self.app.use(express.static('web'));
-        
+        self.app.use('/', express.static('web'));
+
         // Enable Galleon
         self.app.use('/galleon', express.static('galleon'));
 
-        //  Add handlers for the app (from the routes).
-        for (var r in self.routes) {
-            self.app.get(r, self.routes[r]);
-        }
+        // Test Alisson JSON
+        self.app.get('/alisson', function(req, res) {
+            res.json({mensagem:"JSON rima com alisSON"});
+        })
+
+        // Wake Up method
+        self.app.get('/wake-up', function(req, res) {
+            execute({action:'wake-up'}).then(function (response) {res.send(response)})
+        })
+
+        // Route for commands with a expecific action
+        self.app.post('/execute', function(req, res) {
+            execute(req.query).then(function (response) {res.json(response)})
+        })
     };
 
     /**
@@ -104,10 +111,7 @@ var ServerApp = function() {
             console.log('%s: Node server started on %s:%d ...', Date(Date.now()), self.ipaddress, self.port);
         });
     };
-}; 
+};
 
-/**
- *  main():  Main code.
- */
 var serverApp = new ServerApp();
 serverApp.start();

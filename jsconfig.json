@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"target": "es6"
+	},
+	"exclude": [
+		"jspm_packages",
+		"tmp",
+		"temp"
+	]
+}
