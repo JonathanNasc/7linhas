@@ -7,7 +7,8 @@
     "email": "we@donthaveone.yet"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "hello-world" : "node app/examples/helloWord.js"
   },
   "engines": {
     "node": ">= 0.6.0",

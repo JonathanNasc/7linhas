@@ -1,27 +1,46 @@
-var scrape = require('scrape-js');
+var Promise = require('bluebird');
+var scrape  = require('scrape-js');
 
-var scrapeTitle = function(url, cssPath, callback) {
-
-	//para teste
+var makeLine = function (url, titleCssPath, hrefCssPath) {
+	//para teste ####################
 	url = 'http://g1.globo.com/';
-	cssPath = '#g1-card-trends > div > div > ul > li:nth-child(1) > a > span';
+	titleCssPath = '#g1-card-trends > div > div > ul > li:nth-child(1) > a > span';
+	hrefCssPath  = '#g1-card-trends > div > div > ul > li:nth-child(1) > a';
+	//para teste ####################
+	
+	return scrapeTitle(url, titleCssPath)
+		.then(function (title) {
+			return scrapeHref(url, hrefCssPath)
+				.then(function(href){
+					return {title: title, href: href};
+				});
+		});
+}
 
+var scrapeTitle = function(url, cssPath) {
+	return getElement(url, cssPath)
+		.then(function (element) {
+			return element.children[0].data.trim();
+		});
+}
+
+var scrapeHref = function(url, cssPath) {
+	return getElement(url, cssPath)
+		.then(function (element) {
+			return element.attribs.href;
+		});
+}
+
+var getElement = function(url, cssPath){
 	scrape(
 		url, 
 		[cssPath], 
 		function (error, elements) {
 		    if(error) throw error;
-		    elements.forEach(function (element) {
-		        var obj = element[0];
-		        var title = obj.children[0].data.trim();
-		        callback(title);
-		    });
+		    return Promise.resolve(elements[0][0]);
 		});
-}
-
-var scrapeHref = function(args) {
-   return "não implementado ainda";
 }
 
 module.exports.scrapeTitle = scrapeTitle;
 module.exports.scrapeHref = scrapeHref;
+module.exports.makeLine = makeLine;

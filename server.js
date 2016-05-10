@@ -54,7 +54,7 @@ var ServerApp = function() {
     self.initializeServer = function() {
         //
         self.app = express();
-
+        
         // Enable the front-end page
         self.app.use('/', express.static('web'));
 
