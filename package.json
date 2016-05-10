@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "hello-world" : "node app/examples/helloWord.js"
+    "hello-world" : "node app/examples/helloWorld.js"
   },
   "engines": {
     "node": ">= 0.6.0",

@@ -7,7 +7,7 @@ var makeLine = function (url, titleCssPath, hrefCssPath) {
 	titleCssPath = '#g1-card-trends > div > div > ul > li:nth-child(1) > a > span';
 	hrefCssPath  = '#g1-card-trends > div > div > ul > li:nth-child(1) > a';
 	//para teste ####################
-	
+
 	return scrapeTitle(url, titleCssPath)
 		.then(function (title) {
 			return scrapeHref(url, hrefCssPath)
@@ -32,13 +32,15 @@ var scrapeHref = function(url, cssPath) {
 }
 
 var getElement = function(url, cssPath){
-	scrape(
-		url, 
-		[cssPath], 
-		function (error, elements) {
-		    if(error) throw error;
-		    return Promise.resolve(elements[0][0]);
-		});
+	return new Promise(function(resolve,reject){
+       	scrape(
+			url,
+			[cssPath],
+			function (error, elements) {
+				if(error) return reject(error);
+				return resolve(elements[0][0]);
+			});
+    });
 }
 
 module.exports.scrapeTitle = scrapeTitle;

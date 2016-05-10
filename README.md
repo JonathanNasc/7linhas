@@ -2,26 +2,28 @@
 ## Setup
 
 1. Instale a versão `0.10.0` do [Node.js](https://nodejs.org);
-1. Na raiz do projeto execute o seguinte comando para instalar as dependências e configurar a base:
+2. Na raiz do projeto execute o seguinte comando para instalar as dependências e configurar a base:
 
 ```
 npm install
 ```
 
 ## Rodando o Servidor
+1. Inicie o server com o comando a baixo e acesse http://localhost:8080
 ```
 npm start
 ```
 
 ## Executando os Testes
 
+1. Ainda estamos sem testes automatizados. Para rodar um teste manual utilize a classe helloWorld.js e em seguida rode
 ```
-npm test
+npm run hello-world
 ```
 
 ## Regras para Commit
 
-- Seguir o padrão [standard](https://github.com/feross/standard) de identação;
-- Executores com sufixo Executor.js devem exportar um valor chamado de action descrevendo
+1. Seguir o padrão [standard](https://github.com/feross/standard) de identação;
+2. Executores com sufixo Executor.js devem exportar um valor chamado de action descrevendo
 sua ação no padrão caixa-baixa-separado-por-hifen e um método execute com a função a ser executada.
-- Não criar novas rotas. Para funções de api usar a rota padrão /execute.
+3.  Não criar novas rotas. Para funções de api usar a rota padrão /execute.
