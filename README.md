@@ -1,8 +1,9 @@
 
 ## Setup
 
-1. Instale a versão `0.10.0` do [Node.js](https://nodejs.org);
-2. Na raiz do projeto execute o seguinte comando para instalar as dependências e configurar a base:
+1. Instale a versão 2.4 do [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-linux/);
+2. Instale a versão `0.10.0` do [Node.js](https://nodejs.org);
+3. Na raiz do projeto execute o seguinte comando para instalar as dependências e configurar a base:
 
 ```
 npm install
