@@ -1,15 +1,14 @@
-var scraper = require("../core/scraper");
+var scraper = require('../core/scraper')
 
 var execute = function () {
+  // carregar ships do banco
 
-    //carregar ships do banco
+  // chamar scraper
 
-    //chamar scraper
+  // salvar lines no banco
 
-    //salvar lines no banco
-
-    return "AAaaaghhhr... Thank you for wake me up."
+  return 'AAaaaghhhr... Thank you for wake me up.'
 }
 
-module.exports.action  = "wake-up";
-module.exports.execute = execute;
+module.exports.action = 'wake-up'
+module.exports.execute = execute

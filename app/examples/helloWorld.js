@@ -1,3 +1,3 @@
-var scraper = require('../core/scraper');
+var scraper = require('../core/scraper')
 
-scraper.makeLine().then(function(line){console.log(line)});
+scraper.makeLine().then(function (line) {console.log(line)})

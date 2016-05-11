@@ -8,6 +8,7 @@
 ```
 npm install
 ```
+Obs.: é importante fixar as versões para mater compatibilidade com o OpenShift.
 
 ## Rodando o Servidor
 1. Inicie o server com o comando a baixo e acesse http://localhost:8080
@@ -24,7 +25,7 @@ npm run hello-world
 
 ## Regras para Commit
 
-1. Seguir o padrão [standard](https://github.com/feross/standard) de identação;
+1. Instalar e seguir o padrão [standard](https://github.com/feross/standard) de identação.
 2. Executores com sufixo Executor.js devem exportar um valor chamado de action descrevendo
 sua ação no padrão caixa-baixa-separado-por-hifen e um método execute com a função a ser executada.
-3.  Não criar novas rotas. Para funções de api usar a rota padrão /execute.
+3.  Não criar novas rotas para funções de api. U    sar a rota padrão /execute.
