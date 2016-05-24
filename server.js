@@ -1,4 +1,7 @@
 #!/bin/env node
+// define globals
+GLOBAL.APP_PATH = process.cwd() + '/app/'
+
 //  7linhas node server
 var express = require('express')
 var execute = require('./app/execute')
@@ -62,7 +65,10 @@ var ServerApp = function () {
 
     // Test Alisson JSON
     self.app.get('/alisson', function (req, res) {
-      res.json({mensagem: 'JSON rima com alisSON'})
+      execute({action: 'say-hello'})
+        .then(function (hello) {
+          res.json({mensagem: 'JSON rima com alisSON', testeApi: hello})
+        })
     })
 
     // Wake Up method

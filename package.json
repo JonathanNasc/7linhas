@@ -11,13 +11,13 @@
     "hello-world": "node app/examples/helloWorld.js"
   },
   "engines": {
-    "node": ">= 0.6.0",
-    "npm": ">= 1.0.0"
+    "node": "5.0.0"
   },
   "dependencies": {
     "bluebird": "3.3.5",
     "express": "~3.4.4",
-    "mongodb": "2.0.14",
+    "jscrap": "0.0.8",
+    "mongojs": "^2.4.0",
     "scrape-js": "0.0.0"
   },
   "private": true,

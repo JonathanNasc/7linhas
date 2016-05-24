@@ -1,49 +1,31 @@
 var Promise = require('bluebird')
-var scrape = require('scrape-js')
+var jscrap = require('jscrap')
+
+var test = function () {
+  // para teste ####################
+  url = 'http://www.estadao.com.br/ultimas/'
+  titleCssPath = 'body > div.clearfix > div > div.col2-3 > section > ul:nth-child(2) > li > div.listadesc > a > p'
+  hrefCssPath = 'body > div.clearfix > div > div.col2-3 > section > ul:nth-child(2) > li > div.listadesc > a'
+  // para teste ####################
+
+  return makeLine(url, titleCssPath, hrefCssPath)
+    .then(function(line){
+      console.log(line)
+      return line
+    })
+}
 
 var makeLine = function (url, titleCssPath, hrefCssPath) {
-  // para teste ####################
-  url = 'http://g1.globo.com/'
-  titleCssPath = '#g1-card-trends > div > div > ul > li:nth-child(1) > a > span'
-  hrefCssPath = '#g1-card-trends > div > div > ul > li:nth-child(1) > a'
-  // para teste ####################
-
-  return scrapeTitle(url, titleCssPath)
-    .then(function (title) {
-      return scrapeHref(url, hrefCssPath)
-        .then(function (href) {
-          return {title: title, href: href}
-        })
-    })
-}
-
-var scrapeTitle = function (url, cssPath) {
-  return getElement(url, cssPath)
-    .then(function (element) {
-      return element.children[0].data.trim()
-        .replace(/[@&*_|\;'"<>\{\}\[\]\\\/]/gi, '')
-    })
-}
-
-var scrapeHref = function (url, cssPath) {
-  return getElement(url, cssPath)
-    .then(function (element) {
-      return element.attribs.href
-    })
-}
-
-var getElement = function (url, cssPath) {
   return new Promise(function (resolve, reject) {
-    scrape(
-      url,
-      [cssPath],
-      function (error, elements) {
-        if (error) return reject(error)
-        return resolve(elements[0][0])
+    jscrap.scrap(url, function (err, $) {
+      if(err) reject(err);
+      return resolve({
+        title: $(titleCssPath).text().trim(),
+        href: $(hrefCssPath).attr('href')
       })
+    })
   })
 }
 
-module.exports.scrapeTitle = scrapeTitle
-module.exports.scrapeHref = scrapeHref
+module.exports.test     = test
 module.exports.makeLine = makeLine
