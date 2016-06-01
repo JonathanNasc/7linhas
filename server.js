@@ -70,6 +70,14 @@ var ServerApp = function () {
           res.json({mensagem: 'JSON rima com alisSON', testeApi: hello})
         })
     })
+    
+    // Get list of news
+    self.app.get('/get-lines', function (req, res) {
+      execute({action: 'get-lines'})
+        .then(function (response) {
+          res.json(response)
+        })
+    })
 
     // Wake Up method
     self.app.get('/wake-up', function (req, res) {

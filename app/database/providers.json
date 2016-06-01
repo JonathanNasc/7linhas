@@ -21,19 +21,19 @@
       "href":  "body > div.container > section > div > div.col-sm-3 > div > div > div:nth-child(1) > div > h4 > a"
     },
     {
-      "url":   "http://extra.globo.com/",
-      "title": "#mosaic > ul > li.mosaic1.news > a",
-      "href":  "#mosaic > ul > li.mosaic1.news > a"
+      "url":   "https://www.nexojornal.com.br/",
+      "title": "body > div.container > section > div > div.col-sm-3 > div > div > div:nth-child(2) > div > h4 > a",
+      "href":  "body > div.container > section > div > div.col-sm-3 > div > div > div:nth-child(2) > div > h4 > a"
     },
     {
       "url":   "http://www.estadao.com.br/ultimas/",
-      "title": "",
-      "href":  ""
+      "title": "body > div.clearfix > div > div.col2-3 > section > ul:nth-child(2) > li > div.listadesc > a > p",
+      "href":  "body > div.clearfix > div > div.col2-3 > section > ul:nth-child(2) > li > div.listadesc > a"
     },
     {
-      "url":   "http://www.bbc.com/portuguese",
-      "title": "",
-      "href":  ""
+      "url":   "http://g1.globo.com/",
+      "title": "#g1-card-trends > div > div > ul > li:nth-child(2) > a > span",
+      "href":  "#g1-card-trends > div > div > ul > li:nth-child(2) > a"
     }
   ],
   "promotions": [
