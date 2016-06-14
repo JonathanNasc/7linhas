@@ -2,30 +2,28 @@
 ## Setup
 
 1. Instale a versão 2.4 do [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-linux/);
-2. Instale a versão `0.10.0` do [Node.js](https://nodejs.org);
-3. Na raiz do projeto execute o seguinte comando para instalar as dependências e configurar a base:
-
+1. Instale o [Node.js](https://nodejs.org) v5;
+1. Na raiz do projeto execute:
 ```
 npm install
 ```
 Obs.: é importante fixar as versões para mater compatibilidade com o OpenShift.
 
-## Rodando o Servidor
-1. Inicie o server com o comando a baixo e acesse http://localhost:8080
+## Rodando localmente
+
+1. Inicie o MongoDb em um terminal com o comando:
+```
+mongod
+```
+1. Inicie o server com o comando abaixo e acesse http://localhost:8080
 ```
 npm start
 ```
 
-## Executando os Testes
+## Regras
 
-1. Ainda estamos sem testes automatizados. Para rodar um teste manual utilize a classe helloWorld.js e em seguida rode
-```
-npm run hello-world
-```
+1. Seguir o padrão [standard](https://github.com/feross/standard) de identação (é recomendavel instalar os plugins do standard na IDE utilizada).
+1. Excessão esse arquivo e os textos que aparecerão na interface, desenvolver no idioma ingles.
+1. Obedecer a estrutura de arquivos, no caso de funcionalidades de API criar arquivos js com os sufixos routes e manager.
+1. É necessário commitar pacotes Bower. Manter commits isolados para inclusões dessas bibliotecas.
 
-## Regras para Commit
-
-1. Instalar e seguir o padrão [standard](https://github.com/feross/standard) de identação.
-2. Executores com sufixo Executor.js devem exportar um valor chamado de action descrevendo
-sua ação no padrão caixa-baixa-separado-por-hifen e um método execute com a função a ser executada.
-3.  Não criar novas rotas para funções de api. U    sar a rota padrão /execute.
