@@ -1,10 +1,9 @@
 #!/bin/env node
-// define globals
-GLOBAL.APP_PATH = process.cwd() + '/app/'
+require('app-module-path').addPath(__dirname)
 
 //  7linhas node server
 var express = require('express')
-var routes = require('./app/routes')
+var routes = require('app/routes')
 
 var ServerApp = function () {
   var self = this

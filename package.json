@@ -13,6 +13,7 @@
     "node": "5.0.0"
   },
   "dependencies": {
+    "app-module-path": "^1.1.0",
     "bluebird": "3.3.5",
     "express": "^4.13.4",
     "jscrap": "0.0.8",

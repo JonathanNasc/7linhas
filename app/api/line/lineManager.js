@@ -1,6 +1,6 @@
 var Promise = require('bluebird')
 var jscrap = require('jscrap')
-var dbUtils = require('../../dbUtils') //TODO find a better relative import pattern
+var dbUtils = require('app/dbUtils')
 var Promise = require('bluebird')
 var mongojs = require('mongojs')
 var join = require('path').join
