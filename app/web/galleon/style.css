@@ -1,0 +1,193 @@
+body{
+    background: #EAEAEF;
+    margin: 0 auto;
+}
+
+/*content*/
+.content-page{
+    width: 900px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+/*result page*/
+.result-page{
+    background: #fff;
+}
+
+ h1 {
+    width: 400px;
+    font-family: 'Lobster Two', cursive;
+    font-size: 76px;
+    padding: 0px 0px 10px 40px;
+    margin: 30px auto;
+    color: #5B5665;
+}
+
+iframe {
+    background: #fff;
+    float: left;
+    border: 0;
+    height: 100%;
+    width: 400px;
+}
+
+h1>span {
+    position: relative;
+    top: -15px;
+    display: block;
+    margin-left: 45px;
+    color: #756C86;
+    font-size: 16px;
+}
+
+/* Basic Grey Jonathan Nascimento*/
+.basic-grey {
+    float: left;
+    width: 400px;
+    margin: 0 auto;
+    background: #F7F7F7;
+    padding: 20px 15px;
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    color: #888;
+    text-shadow: 1px 1px 1px #FFF;
+}
+
+.basic-grey label {
+    display: block;
+    margin: 0px;
+}
+.basic-grey label>span {
+    float: left;
+    width: 10%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    color: #888;
+}
+input[type="text"], input[type="email"], input[type="password"], textarea, .basic-grey select {
+    border: 1px solid #DADADA;
+    color: #888;
+    height: 30px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 3px 3px 3px 5px;
+    width: 97%;
+    font-size: 12px;
+    line-height:15px;
+    box-shadow: inset 0px 1px 4px #ECECEC;
+    -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+    -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+
+input[type="radio"]{
+    font-size: 20px;
+    margin: 0 10px 15px 20px;
+    transform: scale(2);
+}
+
+.basic-grey textarea{
+    padding: 5px 3px 3px 5px;
+}
+.basic-grey select {
+    background: #FFF url('down-arrow.png') no-repeat right;
+    background: #FFF url('down-arrow.png') no-repeat right;
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 70%;
+    height: 35px;
+    line-height: 25px;
+}
+.basic-grey textarea{
+    height:100px;
+}
+.basic-grey .button {
+    background: #E27575;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    box-shadow: 1px 1px 5px #B6B6B6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #9E3F3F;
+    cursor: pointer;
+}
+.basic-grey .button:hover {
+    background: #CF7A7A
+}
+
+/* Result page*/
+
+#results{
+    background-color: #fff;
+    padding: 10px;
+}
+
+.loading-gif{
+    margin: 100px 30px 100px 200px;
+}
+
+.result-page {
+    padding: 20px;
+    font: Georgia, "Times New Roman", Times, serif;
+    font-size: 26px;
+    color: #777;
+}
+
+.result-page a {
+    color: #444;
+    font-weight: bold;
+}
+
+.no-ships{
+    font-family: 'Lobster Two', cursive;
+    background: #fff;
+    color: #BBB;
+}
+
+.no-ships img,p{
+
+    font-size: 26px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    display: block-inline;
+}
+
+.no-ships p{
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.no-ships img{
+    padding-top: 20px;
+}
+.auto-integrate-btn {
+    background: #5561A5;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    box-shadow: 1px 1px 5px #B6B6B6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #2A3573;
+    cursor: pointer;
+}
+.auto-integrate-btn:hover {
+    background: #737EB7
+}
+
+.radio-ship-type {
+    padding: 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.radio-ship-type.selected {
+    background-color: #E4E3E3;
+}
