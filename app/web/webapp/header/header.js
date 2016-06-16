@@ -1,15 +1,25 @@
 /*global m */
-var header = {
-  controller: function() {
-    // dosomething
+var Header = {
+  controller: function(page) {
+    this.page = page
   },
 	view: function (ctrl) {
+    var page = ctrl.page
     return m('div.header', [
         m('h1','7 Linhas'),
         m('div.tabs', [
-          m('a','Noticias'),
-          m('a','Promoções'),
-          m('a','Menu')
+          m('buttom', {
+            class: (page() === 'news') ? 'active' : '',
+            onclick: function(){page('news')}
+          }, 'Noticias'),
+          m('buttom', {
+            class: (page() === 'promotion') ? 'active' : '',
+            onclick: function(){page('promotion')}
+          }, 'Promoções'),
+          m('buttom', {
+            class: (page() === 'menu') ? 'active' : '',
+            onclick: function(){page('menu')}
+          },'Menu')
         ])
       ])
   }
