@@ -5,7 +5,7 @@ export var Header = {
 	view: function (ctrl) {
     var page = ctrl.page
     return m('div.header', [
-        m('h1','7 Linhas'),
+        m('h1','7 linhas'),
         m('div.tabs', [
           m('buttom', {
             class: (page() === 'news') ? 'active' : '',
