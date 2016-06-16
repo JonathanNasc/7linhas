@@ -1,5 +1,4 @@
-/*global m */
-var Header = {
+export var Header = {
   controller: function(page) {
     this.page = page
   },

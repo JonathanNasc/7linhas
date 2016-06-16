@@ -25,4 +25,3 @@ npm start
 1. Seguir o padrão [standard](https://github.com/feross/standard) de identação (é recomendavel instalar os plugins do standard na IDE utilizada).
 1. Desenvolver no idioma ingles (exceto esse arquivo e os textos que aparecerão na interface).
 1. Obedecer a estrutura de arquivos, no caso de funcionalidades de API criar arquivos js com os sufixos routes e manager.
-1. É necessário commitar pacotes Bower. Ao incluir novos pacotes, isolar commit.
