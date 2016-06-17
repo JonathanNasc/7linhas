@@ -1,0 +1,25 @@
+@media (min-width: 541px){
+	.news-list{
+		margin: 0 auto;
+		width: 900px;
+	}
+}
+@media (max-width: 540px){
+	.news-list{
+		width: 100%;
+	}
+}
+
+.news-list {
+	list-style: none;
+	font-size: 18px;
+	margin: 0 auto;
+	text-align: left;
+	padding: 10px;
+}
+
+.news-list .news-item {
+	border-bottom: 1px solid #dbecf4;
+	padding: 20px;
+	overflow: hidden;
+}

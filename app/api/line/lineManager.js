@@ -35,7 +35,7 @@ var makeLine = function (url, titleCssPath, hrefCssPath) {
 
 var getLines = function () {
   return new Promise(function (resolve, reject) {
-    lines.find({}).limit(7).toArray(function (err, list) {
+    lines.find({}).limit(7).sort({date:-1}).toArray(function (err, list) {
       if (err) reject(err)
       return resolve(list)
     })

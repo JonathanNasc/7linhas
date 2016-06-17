@@ -1,4 +1,5 @@
 @import url('header/header.css');
+@import url('news/news.css');
 
 *{
 	margin:0;
@@ -33,49 +34,6 @@ a:hover {
   font-weight: 400;
   src: local('Cookie-Regular'), url(http://fonts.gstatic.com/s/cookie/v7/crMuSvy3krjox1JAKfe7Ew.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-
-/*-------------------------
-	Post List
---------------------------*/
-@media (min-width: 541px){
-	.news-list{
-		margin: 0 auto;
-		width: 900px;
-	}
-}
-@media (max-width: 540px){
-	.news-list{
-		width: 100%;
-	}
-}
-
-.news-list ul {
-	list-style: none;
-	font-size: 18px;
-	margin: 0 auto;
-	text-align: left;
-	padding: 10px;
-}
-
-.news-list ul li {
-	border-bottom: 1px solid #DDD;
-	padding: 10px;
-	overflow: hidden;
-}
-
-.news-list ul li img {
-	width:60px;
-	height:60px;
-	float:left;
-	border:none;
-}
-
-.news-list ul li p {
-	margin-left: 75px;
-	font-weight: bold;
-	padding-top: 12px;
-	color:#6E7A7F;
 }
 
 #footer {

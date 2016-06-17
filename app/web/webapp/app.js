@@ -1,10 +1,11 @@
 import { Header } from './header/header.js'
+import { News } from './news/news.js'
 
 var App = {
   controller: function(){
     this.page = m.prop('news')
     this.content = {
-      'news': m('div','news'),
+      'news': m(News),
       'promotion': m('div','promotion'),
       'menu': m('div','menu')
     }
