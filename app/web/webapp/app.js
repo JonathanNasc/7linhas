@@ -13,8 +13,8 @@ var App = {
   view: function(ctrl){
   	return [
       m(Header, ctrl.page),
-      ctrl.content[ctrl.page()],
-      m('div#footer')
+      m('div#content', ctrl.content[ctrl.page()]),
+      m('div#footer','footer')
   	];
   }
 }
