@@ -1,29 +1,29 @@
+import { template } from 'webapp/commons/template.js'
 
-var getNewsLines = function(){
-  return m.request({method: "GET", url: "api/get-lines"})
-    .then(function(lines) {
-        return lines
-    });
+News = {}
+
+News.controller = function() {
+  var self = this
+
+  this.lines = m.prop([])
+
+  m.request({method: "GET", url: "api/get-lines"})
+    .then(function(response){
+      self.lines(response)
+    })
+
 }
 
-export var News = {
-  controller: function() {
-    var self = this
+News.view = function (ctrl) {
+  var content = m("div.news-list",
+    ctrl.lines().map(function(line) {
+      return m("div.news-item",
+        m("a", {href: line.href, target:'blank'}, line.title)
+      )
+    })
+  )
 
-    this.newsLines = m.prop([])
-    getNewsLines()
-      .then(function(lines){
-        self.newsLines(lines)
-      })
-
-  },
-	view: function (ctrl) {
-    return m("div.news-list",
-      ctrl.newsLines().map(function(line) {
-        return m("div.news-item",
-          m("a", {href: line.href, target:'blank'}, line.title)
-        )
-      })
-    )
-  }
+  return template('news', content)
 }
+
+export var News

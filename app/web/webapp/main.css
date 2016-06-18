@@ -1,5 +1,7 @@
 @import url('header/header.css');
 @import url('news/news.css');
+@import url('options/options.css');
+@import url('presentation/presentation.css');
 
 *{
 	margin:0;
@@ -18,7 +20,7 @@ body {
 }
 
 a {
-	outline: none;
+	cursor: pointer;
 	text-decoration: none;
 	color: #46849f;
 }
@@ -45,12 +47,35 @@ a:hover {
 	padding-bottom:50px;
 }
 
+@media (min-width: 541px){
+	#content {
+		margin: 0 auto;
+		width: 600px;
+	}
+}
+
+@media (max-width: 540px){
+	#content {
+		width: 100%;
+	}
+}
+
 #footer {
 	background: #37677c;
+	padding: 20px 0;
 	width:100%;
 	position: absolute;
 	height: auto;
 	bottom:0;
 	left:0;
 	color: #fff;
+}
+
+#footer a {
+	color: #fff;
+	cursor: pointer;
+}
+
+#footer a:hover {
+	text-decoration: underline;
 }

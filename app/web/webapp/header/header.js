@@ -1,25 +1,33 @@
-export var Header = {
-  controller: function(page) {
-    this.page = page
-  },
-	view: function (ctrl) {
-    var page = ctrl.page
-    return m('div.header', [
-        m('h1','7 linhas'),
-        m('div.tabs', [
-          m('buttom', {
-            class: (page() === 'news') ? 'active' : '',
-            onclick: function(){page('news')}
-          }, 'Noticias'),
-          m('buttom', {
-            class: (page() === 'promotion') ? 'active' : '',
-            onclick: function(){page('promotion')}
-          }, 'Promoções'),
-          m('buttom', {
-            class: (page() === 'menu') ? 'active' : '',
-            onclick: function(){page('menu')}
-          },'Menu')
-        ])
-      ])
-  }
+Header = {}
+
+Header.controller = function(tab) {
+  this.tab = tab
 }
+
+Header.view = function (ctrl) {
+  var tab = ctrl.tab
+  return m('div.header', [
+    m('h1','7 linhas'),
+    m('div.tabs', [
+      m('buttom', {
+        class: (tab === 'news') ? 'active' : '',
+        onclick: function(){ m.route("/news") }
+      }, 'Noticias'),
+      m('buttom', {
+        class: (tab === 'promotions') ? 'active' : '',
+        onclick: function(){ m.route("/promotions") }
+      }, 'Promoções'),
+      m('buttom', {
+        class: (tab === 'options') ? 'active' : '',
+        onclick: function(){ m.route("/options") }
+      }, m('img.options-btn', {
+          src: (tab !== 'options')
+            ? 'webapp/header/options-light.svg'
+            : 'webapp/header/options-dark.svg'
+          })
+        )
+    ])
+  ])
+}
+
+export var Header

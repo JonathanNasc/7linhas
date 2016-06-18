@@ -6,7 +6,7 @@
 	background-image:linear-gradient(top, #5c9bb7, #5392ad);
 }
 
-.tabs buttom {
+.header .tabs buttom {
 	display: inline-block;
 	padding: 10px 10px;
 	margin: 0px 2px 0px 2px;
@@ -17,7 +17,7 @@
 	background: rgba(20, 51, 64, 0.7);
 }
 
-.tabs .active {
+.header .tabs .active {
 	background: #fff;
 	color: #5C9BB7;
 }
@@ -29,4 +29,10 @@
 	font-weight: normal;
 	line-height: 1;
 	text-shadow: 0 3px 0 rgba(0,0,0,0.1);
+}
+
+.header .options-btn {
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
 }
