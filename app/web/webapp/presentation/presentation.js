@@ -24,10 +24,14 @@ Presentation.view = function () {
 
 	return template(null,
     m('div.presentation',[
-      m('h3','Apresentação'),
-			m('p','O 7linhas.com é um projeto de dois brasileiros da cidade de Curitiba. ' +
+			m('h3','Apresentação'),
+			m('p','O 7linhas.com verifica automaticamente as 7 ' +
+				'notícias mais relevantes do momento e as 7 melhores promoções do dia. ' +
+				'Confira e nos diga o que achou.'),
+      m('h3','Sobre o pojeto'),
+			m('p','O 7linhas.com é mantido por dois brasileiros da cidade de Curitiba. ' +
 				'O nosso objetivo é oferecer gratuitamente informações úteis sobre notícias ' +
-				'e promoções. Ao mesmo tempo, aproveitamos para testar as incriveis tecnologias ' +
+				'e promoções e ao mesmo tempo, aproveitamos para testar as incriveis tecnologias ' +
 				'que este projeto utiliza:'),
 		  m('div.tecnologies', tecnologies.map(function(t){
 				return m('a[href=' + t.href + ']', [
