@@ -7,7 +7,7 @@ News.controller = function() {
 
   this.lines = m.prop([])
 
-  m.request({method: "GET", url: "api/get-lines"})
+  m.request({method: "GET", url: "api/get-news"})
     .then(function(response){
       self.lines(response)
     })

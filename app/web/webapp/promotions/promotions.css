@@ -1,0 +1,18 @@
+.promotions-list {
+	list-style: none;
+	font-size: 18px;
+	margin: 0 auto;
+	text-align: left;
+	padding: 10px;
+}
+
+.promotions-list .promotion-item {
+	border-bottom: 1px solid #E6E6E6;
+	padding: 20px;
+	overflow: hidden;
+}
+
+.promotions-list .promotion-price {
+	font-weight: bold;
+	font-size: 20px;	
+}

@@ -11,14 +11,16 @@ Obs.: é importante fixar as versões para mater compatibilidade com o OpenShift
 
 ## Rodando localmente
 
-1. Inicie o MongoDb em um terminal com o comando:
+1. Inicie o MongoDb em um terminal
 ```
 mongod
 ```
-1. Inicie o server com o comando abaixo e acesse http://localhost:8080
+1. Inicie o server em outro terminal
 ```
 npm start
 ```
+1. Para popular a base acesse http://localhost:8080/api/wake-up
+1. A aplicação estará disponível em http://localhost:8080/
 
 ## Regras
 
