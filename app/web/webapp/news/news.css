@@ -1,0 +1,13 @@
+.news-list {
+	list-style: none;
+	font-size: 18px;
+	margin: 0 auto;
+	text-align: left;
+	padding: 10px;
+}
+
+.news-list .news-item {
+	border-bottom: 1px solid #E6E6E6;
+	padding: 20px;
+	overflow: hidden;
+}

@@ -1,0 +1,2 @@
+#!/bin/bash
+wget -O- http://sevenlines-jnasc.rhcloud.com/api/wake-up > /dev/null

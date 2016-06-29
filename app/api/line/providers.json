@@ -1,0 +1,83 @@
+{
+  "news": [
+    {
+      "url"  : "http://noticias.band.uol.com.br/",
+      "title": "#listamaislidas > ol > li:nth-child(1) > a",
+      "href" : "#listamaislidas > ol > li:nth-child(1) > a"
+    },
+    {
+      "url"  : "http://g1.globo.com/",
+      "title": "#g1-card-trends > div > div > ul > li:nth-child(1) > a > span",
+      "href" : "#g1-card-trends > div > div > ul > li:nth-child(1) > a"
+    },
+    {
+      "url"  : "http://www.uol.com.br/",
+      "title": "#corpo > div.mod-horizontal.mais-lidas-voce-viu > div > div.mais-lidas-container > ol > li.horizontal-chamada.chamada1 > h2 > a > span.content > span",
+      "href" : "#corpo > div.mod-horizontal.mais-lidas-voce-viu > div > div.mais-lidas-container > ol > li.horizontal-chamada.chamada1 > h2 > a"
+    },
+    {
+      "url"  : "https://www.nexojornal.com.br/",
+      "title": "body > div.container > section > div > div.col-sm-3 > div > div > div:nth-child(1) > div > h4 > a",
+      "href" : "body > div.container > section > div > div.col-sm-3 > div > div > div:nth-child(1) > div > h4 > a"
+    },
+    {
+      "url"  : "https://www.nexojornal.com.br/",
+      "title": "body > div.container > section > div > div.col-sm-3 > div > div > div:nth-child(2) > div > h4 > a",
+      "href" : "body > div.container > section > div > div.col-sm-3 > div > div > div:nth-child(2) > div > h4 > a"
+    },
+    {
+      "url"  : "http://www.estadao.com.br/ultimas/",
+      "title": "body > div.clearfix > div > div.col2-3 > section > ul:nth-child(2) > li > div.listadesc > a > p",
+      "href" : "body > div.clearfix > div > div.col2-3 > section > ul:nth-child(2) > li > div.listadesc > a"
+    },
+    {
+      "url"  : "http://g1.globo.com/",
+      "title": "#g1-card-trends > div > div > ul > li:nth-child(2) > a > span",
+      "href" : "#g1-card-trends > div > div > ul > li:nth-child(2) > a"
+    }
+  ],
+  "promotions": [
+    {
+      "url"  : "http://www.pontofrio.com.br/oferta/oferta-especial.aspx",
+      "title": "#ctl00_TopBar_PaginaSistemaArea1_5331 > div.lista-mod02.prateleira > ul > li > div > a",
+      "href" : "#ctl00_TopBar_PaginaSistemaArea1_5331 > div.lista-mod02.prateleira > ul > li > div > a",
+      "price": "#ctl00_TopBar_PaginaSistemaArea1_5331 > div.lista-mod02.prateleira > ul > li > div > .productDetails .sale strong"
+    },
+    {
+      "url"  : "http://www.extra.com.br/promocao-do-dia/oferta-extraordinaria.aspx",
+      "title": "div.hproduct a.link.url",
+      "href" : "div.hproduct a.link.url",
+      "price": "div.hproduct .productDetails .sale strong"
+    },
+    {
+      "url"  : "http://ofertas.mercadolivre.com.br/mega-ofertas",
+      "title": "#searchResults li.article:nth-child(1) h2 a",
+      "href" : "#searchResults li.article:nth-child(1) h2 a",
+      "price": "#searchResults li.article:nth-child(1) ul.details li.costs div.price-wrap span.ch-price"
+    },
+    {
+      "url"  : "http://ofertas.mercadolivre.com.br/mega-ofertas",
+      "title": "#searchResults li.article:nth-child(2) h2 a",
+      "href" : "#searchResults li.article:nth-child(2) h2 a",
+      "price": "#searchResults li.article:nth-child(2) ul.details li.costs div.price-wrap span.ch-price"
+    },
+    {
+      "url"  : "http://ofertas.mercadolivre.com.br/mega-ofertas",
+      "title": "#searchResults li.article:nth-child(3) h2 a",
+      "href" : "#searchResults li.article:nth-child(3) h2 a",
+      "price": "#searchResults li.article:nth-child(3) ul.details li.costs div.price-wrap span.ch-price"
+    },
+    {
+      "url"  : "http://ofertas.mercadolivre.com.br/mega-ofertas",
+      "title": "#searchResults li.article:nth-child(4) h2 a",
+      "href" : "#searchResults li.article:nth-child(4) h2 a",
+      "price": "#searchResults li.article:nth-child(4) ul.details li.costs div.price-wrap span.ch-price"
+    },
+    {
+      "url"  : "http://ofertas.mercadolivre.com.br/mega-ofertas",
+      "title": "#searchResults li.article:nth-child(5) h2 a",
+      "href" : "#searchResults li.article:nth-child(5) h2 a",
+      "price": "#searchResults li.article:nth-child(5) ul.details li.costs div.price-wrap span.ch-price"
+    }
+  ]
+}

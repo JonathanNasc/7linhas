@@ -1,0 +1,24 @@
+{
+  "name": "seven-lines",
+  "version": "1.0.0",
+  "description": "The hottest seven lines of your day",
+  "author": {
+    "name": "Japplab",
+    "email": "we@donthaveone.yet"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "5.0.0"
+  },
+  "dependencies": {
+    "app-module-path": "^1.1.0",
+    "bluebird": "3.3.5",
+    "express": "^4.13.4",
+    "jscrap": "0.0.8",
+    "mongojs": "^2.4.0"
+  },
+  "private": true,
+  "main": "server.js"
+}
