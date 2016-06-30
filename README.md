@@ -20,12 +20,12 @@ npm install
 ```
 mongod
 ```
-1. Start 7linhas
+2. Start 7linhas
 ```
 npm start
 ```
-1. To load news and promotions http://localhost:8800/api/wake-up
-1. The application will be running at http://localhost:8800/
+3. To load news and promotions http://localhost:8800/api/wake-up
+4. The application will be running at http://localhost:8800/
 
 ## Rules
 
