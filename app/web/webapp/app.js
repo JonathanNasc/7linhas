@@ -3,11 +3,13 @@ import { Promotions } from 'webapp/promotions/promotions.js'
 import { Options } from 'webapp/options/options.js'
 import { Presentation } from 'webapp/presentation/presentation.js'
 
+var m = window.m
+
 m.route.mode = 'hash'
 m.route(document.getElementById('app'), '/', {
-    '/': News,
-    '/news': News,
-    '/promotions': Promotions,
-    '/options': Options,
-    '/presentation': Presentation
+  '/': News,
+  '/news': News,
+  '/promotions': Promotions,
+  '/options': Options,
+  '/presentation': Presentation
 })

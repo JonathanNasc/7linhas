@@ -1,24 +1,25 @@
 import { template } from 'webapp/commons/template.js'
 
+var m = window.m
+
 News = {}
 
-News.controller = function() {
+News.controller = function () {
   var self = this
 
   this.lines = m.prop([])
 
-  m.request({method: "GET", url: "api/get-news"})
-    .then(function(response){
+  m.request({method: 'GET', url: 'api/get-news'})
+    .then(function (response) {
       self.lines(response)
     })
-
 }
 
 News.view = function (ctrl) {
-  var content = m("div.news-list",
-    ctrl.lines().map(function(line) {
-      return m("div.news-item",
-        m("a", {href: line.href, target:'blank'}, line.title)
+  var content = m('div.news-list',
+    ctrl.lines().map(function (line) {
+      return m('div.news-item',
+        m('a', {href: line.href, target: 'blank'}, line.title)
       )
     })
   )
