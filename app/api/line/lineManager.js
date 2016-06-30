@@ -40,7 +40,7 @@ var startRoutineSearch = function () {
           }
 
           // insert a new line if there isn't another exactly equals
-          if (!doc) {
+          if (doc.length === 0) {
             line.date = new Date()
             promotionsDb.insert(line)
           }
