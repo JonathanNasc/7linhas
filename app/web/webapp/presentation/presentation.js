@@ -6,19 +6,19 @@ Presentation.view = function () {
 	var tecnologies = [
 		{
 			href:'https://www.mongodb.com/',
-			img:'http://www.douglaspasqua.com/wp-content/uploads/2015/12/mongodb_slide.png'
+			img:'webapp/presentation/img/mongo.png'
 		},
 		{
 			href:'https://openshift.redhat.com',
-			img:'http://blog.toppagedesign.com/assets/images/openshift-logo.png'
+			img:'webapp/presentation/img/openshift.png'
 		},
 		{
 			href:'https://nodejs.org/',
-			img:'https://cdn4.iconfinder.com/data/icons/logos-3/456/nodejs-new-pantone-black-128.png'
+			img:'webapp/presentation/img/node.png'
 		},
 		{
 			href:'http://mithril.js.org/',
-			img:'http://www.appjudo.com/img/technology/logos/mithril.png'
+			img:'webapp/presentation/img/mithril.png'
 		},
 	]
 
@@ -28,7 +28,7 @@ Presentation.view = function () {
 			m('p','O 7linhas.com verifica automaticamente as 7 ' +
 				'notícias mais relevantes do momento e as 7 melhores promoções do dia. ' +
 				'Confira e nos diga o que achou.'),
-      m('h3','Sobre o pojeto'),
+      m('h3','Sobre o projeto'),
 			m('p','O 7linhas.com é mantido por dois brasileiros da cidade de Curitiba. ' +
 				'O nosso objetivo é oferecer gratuitamente informações úteis sobre notícias ' +
 				'e promoções e ao mesmo tempo, aproveitamos para testar as incriveis tecnologias ' +
@@ -42,7 +42,8 @@ Presentation.view = function () {
       m('ul', [
   			m('a[href=https://twitter.com/jhonynasc]', '@jhonynasc '),
   			m('a[href=https://twitter.com/alissonlcunha]', '@alissonlcunha')
-  		])
+  		]),
+		m('a[href=https://github.com/JonathanNasc/7linhas]', m('img[src=webapp/presentation/img/github.png]'))
   	])
   )
 }

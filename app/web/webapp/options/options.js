@@ -6,7 +6,7 @@ Options.view = function () {
 	var content = m('div.options',[
 		m('ul', [
 			m('li', {onclick : function(){m.route('/presentation')}}, 'Apresentação'),
-			m('li', 'Entre em contato')
+			m('li', {onclick : function(){window.location.href = 'https://github.com/JonathanNasc/7linhas'}}, 'GitHub')
 		])
 	])
 
