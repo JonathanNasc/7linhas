@@ -1,7 +1,7 @@
 
 # 7Linhas
 A clean, fast and opensource trending news app for the web.
-See it running with Brazilian news [7linhas.com](http://www.7linhas.com)
+See it running with Brazilian news [http://sevenlines-jnasc.rhcloud.com/](http://sevenlines-jnasc.rhcloud.com/)
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
